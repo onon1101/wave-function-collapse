@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es5",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    "jsx": "react",                                /* Specify what JSX code is generated. */
-    "module": "es6",                                /* Specify what module code is generated. */
-    "moduleResolution": "node",                     /* Specify how TypeScript looks up a file from a given module specifier. */
-    "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */     /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
-    "outDir": "./dist/",                                   /* Specify an output folder for all emitted files. */
-    "esModuleInterop": false,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
-    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
-    "strict": false,                                      /* Enable all strict type-checking options. */
-    "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
-    "skipLibCheck": false                                 /* Skip type checking all .d.ts files. */
-  }
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "noEmit": false,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node"
+  },
+  "files": [
+    "./src/@types/images.d.ts",
+    "./src/@types/p5.d.ts",
+  ]
 }
