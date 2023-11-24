@@ -115,22 +115,39 @@ export class P5Project {
 
         // 重新排列
         pickRandomGrid.sort((firstElem: IGrid, secondElem: IGrid) => {
-            const lengthFirstOptions: number = firstElem.options.length;
-            const lengthSecondOptions: number = secondElem.options.length;
+            return firstElem.options.length - secondElem.options.length;
+            // const lengthFirstOptions: number = firstElem.options.length;
+            // const lengthSecondOptions: number = secondElem.options.length;
+            //
+            // if (lengthFirstOptions < lengthSecondOptions) {
+            //     return -1;
+            // } else if (lengthFirstOptions > lengthSecondOptions) {
+            //     return 1;
+            // } else {
+            //     return 0;
+            // }
+        });
 
-            if (lengthFirstOptions < lengthSecondOptions) {
-                return -1;
-            } else if (lengthFirstOptions > lengthSecondOptions) {
-                return 1;
-            } else {
-                return 0;
+        console.log(pickRandomGrid);
+
+        let len = pickRandomGrid[0].options.length;
+        let stopIndex = 0;
+        for (let i = 1; i < pickRandomGrid.length; i++) {
+            if (pickRandomGrid[i].options.length > len) {
+                stopIndex = i;
+                break;
             }
-        });
+        }
 
-        pickRandomGrid.filter((elem: IGrid, idx: number, array: Array<IGrid>) => {
-            return elem.options.length <= array[0].options.length;
-        });
+        if (stopIndex > 0) {
+            pickRandomGrid.splice(stopIndex);
+        }
 
+        // pickRandomGrid = pickRandomGrid.filter((elem: IGrid, idx: number, array: Array<IGrid>) => {
+        //     return elem.options.length <= array[0].options.length;
+        // });
+
+        console.log(pickRandomGrid);
         // 隨機挑選
         const randomGrid: IGrid = p.random(pickRandomGrid);
         const randomGridOptions: number= p.random(randomGrid.options);
@@ -226,6 +243,6 @@ export class P5Project {
         });
 
         console.log(this.grid);
-        p.noLoop();
+        // p.noLoop();
     }
 }

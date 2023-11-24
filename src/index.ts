@@ -3,7 +3,7 @@ import * as p5 from 'p5';
 import * as P5Project from './modules/p5Project';
 
 export const sketch = (p: p5) => {
-    const p5: P5Project.P5Project = new P5Project.P5Project(2);
+    const p5: P5Project.P5Project = new P5Project.P5Project(4);
 
     p.mousePressed = (): void => p5.mousePressed(p);
     p.preload = (): void => p5.preload(p);
