@@ -1,4 +1,4 @@
-import {direction} from "../../@types/p5";
+import {direction} from "../initConfig";
 
 // interface directionRules {
 //     // BLANK: Array<Array<direction>>;

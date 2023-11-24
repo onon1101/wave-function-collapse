@@ -1,4 +1,7 @@
 {
+  "include": [
+    "src",
+  ],
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
@@ -8,9 +11,5 @@
     "jsx": "react",
     "allowJs": true,
     "moduleResolution": "node"
-  },
-  "files": [
-    "./src/@types/images.d.ts",
-    "./src/@types/p5.d.ts",
-  ]
+  }
 }
